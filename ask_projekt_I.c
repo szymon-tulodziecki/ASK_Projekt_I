@@ -217,7 +217,7 @@ void odejmowanieU2() {
     printf("%d - %d = %d + (%d) = %d \n", a, b, a, b_hlp, wynik);
 
 
-    printf("\n\nBinarnie: \n");
+    printf("\n\nBinarnie (A + (~B +1)): \n");
     drukujBin(&a, sizeof(a));
     printf("(bin)\n");
     printf("                   + \n"); 
