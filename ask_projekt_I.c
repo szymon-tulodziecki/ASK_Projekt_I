@@ -87,7 +87,7 @@ void pokazBajty(){
 }
 //----------------------------------------------
 int wybierzTyp(){
-    int opcja;
+    int opcja, k;
     printf("\n\n");
     do{
         printf("Wybierz typ:\n");
@@ -95,14 +95,14 @@ int wybierzTyp(){
         printf("2. FLOAT\n");
         printf("3. DOUBLE\n");
         printf("-> ");
-        scanf("%d", &opcja);
+        k = scanf("%d", &opcja);
 
-        if(opcja < 1 || opcja > 3){
+        if(opcja < 1 || opcja > 3 || k != 1){
             system("clear");
             printf("Błędny wybór spróbuj jeszcze raz! \n");
-            fflush(stdin);
+            while (getchar() != '\n');
         }
-    }while(opcja < 1 || opcja > 3);
+    }while(opcja < 1 || opcja > 3 || k != 1);
     return opcja;
 }
 
@@ -116,7 +116,7 @@ int wczytajInt(){
         if(k != 1){
             system("clear");
             printf("Podano zly typ\n");
-            fflush(stdin);
+            while (getchar() != '\n');
         }
     }while(k != 1);
     return liczba;
@@ -132,7 +132,7 @@ float wczytajFloat(){
         k = scanf("%f", &liczba);
         if(k != 1){
             printf("Podano zly typ\n");
-            fflush(stdin);
+            while (getchar() != '\n');
         }
     }while(k != 1);
     return liczba;
@@ -147,7 +147,7 @@ double wczytajDouble(){
         k = scanf("%lf", &liczba);
         if(k != 1){
             printf("Podano zly typ\n");
-            fflush(stdin);
+            while (getchar() != '\n');
         }
     }while(k != 1);
     return liczba;
@@ -236,7 +236,7 @@ void konwersja() {
     oddzielenie();
     printf("\n-----------------------KONWERSJA----------------------\n");
     printf("\n-------------FLOAT -> DEC lub DEC -> FLOAT------------\n");
-    int opcja;
+    int opcja, k;
     
     printf("\n\n");
     do{
@@ -244,14 +244,14 @@ void konwersja() {
         printf("1. DEC -> FLOAT\n");
         printf("2. FLOAT -> DEC\n");
         printf("-> ");
-        scanf("%d", &opcja);
+        k = scanf("%d", &opcja);
 
-        if(opcja < 1 || opcja > 3){
+        if(opcja < 1 || opcja > 3 || k != 1){
             system("clear");
             printf("Błędny wybór spróbuj jeszcze raz! \n");
-            fflush(stdin);
+            while (getchar() != '\n');
         }
-    }while(opcja < 1 || opcja > 3);
+    }while(opcja < 1 || opcja > 3 || k != 1);
 
     if(opcja == 1){
         int liczba = wczytajInt();
